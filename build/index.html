@@ -7,11 +7,12 @@
   <body>
     <!-- Attachment point for your app -->
     <div id="container"></div>
-    <script src="./dist/client.bundle.js"></script>
+    <script src="./dist/client.bundle.js" type="text/javascript"></script>
+    <script src="./client.bundle.js"></script>
     <script>
       // Initialize the React 360 application
       React360.init(
-        './dist/index.bundle.js',
+        'index.bundle.js',
         document.getElementById('container'),
         {
           assetRoot: './dist/static_assets/',
