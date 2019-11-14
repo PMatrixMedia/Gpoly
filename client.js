@@ -8,9 +8,9 @@ function init(bundle, parent, options = {}) {
 
   // Create three roots: two flat panels on the left and the right, and a Location
   // to mount rendered models in 3D space
-  const leftPanel = new Surface(300, 600, Surface.SurfaceShape.Flat);
+  const leftPanel = new Surface(400, 600, Surface.SurfaceShape.Flat);
   leftPanel.setAngle(-0.6, 0);
-  const rightPanel = new Surface(300, 600, Surface.SurfaceShape.Flat);
+  const rightPanel = new Surface(400, 600, Surface.SurfaceShape.Flat);
   rightPanel.setAngle(0.6, 0);
   r360.renderToSurface(
     r360.createRoot('TopPosts'),
@@ -25,7 +25,7 @@ function init(bundle, parent, options = {}) {
     new Location([0, -2, -10]),
   );
 
-  r360.compositor.setBackground('./static_assets/360_world.jpg');
+  r360.compositor.setBackground('./dist/static_assets/360_world.jpg');
 }
 
 window.React360 = {init};
