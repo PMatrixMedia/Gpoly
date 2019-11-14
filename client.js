@@ -2,7 +2,7 @@ import {ReactInstance, Location, Surface} from 'react-360-web';
 
 function init(bundle, parent, options = {}) {
   const r360 = new ReactInstance(bundle, parent, {
-    fullScreen: false,
+    fullScreen: true,
     ...options,
   });
 
@@ -25,7 +25,7 @@ function init(bundle, parent, options = {}) {
     new Location([0, -2, -10]),
   );
 
-  r360.compositor.setBackground('./dist/static_assets/360_world.jpg');
+  r360.compositor.setBackground('./static_assets/360_world.jpg');
 }
 
 window.React360 = {init};
