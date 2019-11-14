@@ -1,6 +1,7 @@
 import {ReactInstance, Location, Surface} from 'react-360-web';
 
 function init(bundle, parent, options = {}) {
+
   const r360 = new ReactInstance(bundle, parent, {
     fullScreen: true,
     ...options,
@@ -8,9 +9,9 @@ function init(bundle, parent, options = {}) {
 
   // Create three roots: two flat panels on the left and the right, and a Location
   // to mount rendered models in 3D space
-  const leftPanel = new Surface(400, 600, Surface.SurfaceShape.Flat);
+  const leftPanel = new Surface(300, 600, Surface.SurfaceShape.Flat);
   leftPanel.setAngle(-0.6, 0);
-  const rightPanel = new Surface(400, 600, Surface.SurfaceShape.Flat);
+  const rightPanel = new Surface(300, 600, Surface.SurfaceShape.Flat);
   rightPanel.setAngle(0.6, 0);
   r360.renderToSurface(
     r360.createRoot('TopPosts'),
