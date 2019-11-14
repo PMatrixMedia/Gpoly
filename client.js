@@ -2,7 +2,7 @@ import {ReactInstance, Location, Surface} from 'react-360-web';
 
 function init(bundle, parent, options = {}) {
   const r360 = new ReactInstance(bundle, parent, {
-    fullScreen: true,
+    fullScreen: false,
     ...options,
   });
 
