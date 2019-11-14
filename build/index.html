@@ -1,18 +1,19 @@
 <html>
   <head>
-    <title>Multiple Roots Sample</title>
+    <title>Multiple Surface</title>
     <style>body { margin: 0; }</style>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   </head>
   <body>
     <div id="container"></div>
-    <script src="./client.bundle.js"></script>
+    <script src="./dist/client.bundle.js"></script>
     <script>
       React360.init(
-        'index.bundle.js',
+        './dist/index.bundle.js',
         document.getElementById('container'),
         {
           bridgeFile: 'NonBlobBridge.js',
+          assetRoot: './dist/static_assets/',
         }
       );
     </script>
